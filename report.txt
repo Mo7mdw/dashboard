@@ -1,0 +1,64 @@
+1. تنصيب Laravel 11:
+
+
+
+
+2. إعداد قاعدة البيانات:
+
+تعديل ملف .env بإدخال بيانات الاتصال بقاعدة البيانات (MySQL).
+
+
+
+3. إنشاء Migration لجدول notes:
+
+
+
+
+4. تشغيل المايجريشن:
+
+
+
+
+5. إنشاء نموذج (Model):
+
+
+
+
+6. إنشاء Controller:
+
+
+php artisan make:controller NoteController --resource --model=Note
+
+
+
+7. إنشاء Request Validation:
+
+
+
+php artisan make:request NoteStoreRequest
+php artisan make:request NoteUpdateRequest
+
+
+
+
+
+8. إعداد Routes:
+
+في routes/web.php:
+
+Route::resource('notes', NoteController::class);
+
+
+
+9. تصميم الواجهات (Views):
+
+استخدام Blade لإنشاء الملفات:
+
+index.blade.php, create.blade.php, edit.blade.php, show.blade.php.
+
+
+يتم تنسيقها بـ Bootstrap 5.
+
+
+
+10. تشغيل التطبيق
